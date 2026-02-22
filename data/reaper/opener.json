@@ -1,0 +1,87 @@
+{
+  "phase": "opener",
+  "label": "Opener",
+  "description": "The standard Reaper opener establishes Death's Design, generates resources aggressively, and transitions into the double Enshroud burst window under Arcane Circle.",
+  "steps": [
+    {
+      "position": 1,
+      "skill": "soulsow",
+      "type": "gcd",
+      "timing": "Pre-pull",
+      "reasoning": "Free cast outside of combat. Grants the Soulsow buff which enables Harvest Moon later for movement or extra damage.",
+      "resources": { "soul": 0, "shroud": 0 }
+    },
+    {
+      "position": 2,
+      "skill": "harpe",
+      "type": "gcd",
+      "timing": "-2s",
+      "reasoning": "Ranged GCD to initiate combat before the boss is pulled into melee range. Starts the GCD rolling early.",
+      "resources": { "soul": 0, "shroud": 0 }
+    },
+    {
+      "position": 3,
+      "skill": "shadow_of_death",
+      "type": "gcd",
+      "timing": "0s",
+      "reasoning": "Apply Death's Design debuff (+10% damage taken) for 30s. This must be up before any burst damage. Also generates 10 Soul.",
+      "resources": { "soul": 10, "shroud": 0 }
+    },
+    {
+      "position": 4,
+      "skill": "soul_slice",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Aggressive early use of Soul Slice to generate 50 Soul gauge quickly. Burns charges in the first 10s (per RPR_Default line 57).",
+      "resources": { "soul": 60, "shroud": 0 }
+    },
+    {
+      "position": 5,
+      "skill": "arcane_circle",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "120s raid buff — 3% damage for the party for 20s. All burst actions must happen inside this window. Also grants Circle of Sacrifice for Plentiful Harvest stacks.",
+      "resources": { "soul": 60, "shroud": 0 }
+    },
+    {
+      "position": 6,
+      "skill": "gluttony",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Grants 2 Soul Reaver + 2 Executioner stacks. 520 potency attack. Must be used inside Arcane Circle for maximum value.",
+      "resources": { "soul": 10, "shroud": 0 }
+    },
+    {
+      "position": 7,
+      "skill": "gibbet",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Spends Executioner stack from Gluttony. Flank positional for bonus potency (560 vs 500). Grants Enhanced Gallows buff.",
+      "resources": { "soul": 10, "shroud": 10 }
+    },
+    {
+      "position": 8,
+      "skill": "blood_stalk",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Spends 50 Soul to grant Soul Reaver. Keeps the burst window flowing with more Gibbet/Gallows uses.",
+      "resources": { "soul": 10, "shroud": 10 }
+    },
+    {
+      "position": 9,
+      "skill": "gallows",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Spends Executioner/Soul Reaver stack. Rear positional for bonus potency. Alternates with Gibbet for Enhanced buffs.",
+      "resources": { "soul": 10, "shroud": 20 }
+    },
+    {
+      "position": 10,
+      "skill": "plentiful_harvest",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Spend Immortal Sacrifice stacks from Arcane Circle's Circle of Sacrifice. Generates 50 Shroud gauge for Enshroud entry.",
+      "resources": { "soul": 10, "shroud": 70 }
+    }
+  ]
+}

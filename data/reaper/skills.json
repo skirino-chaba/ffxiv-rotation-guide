@@ -1,0 +1,204 @@
+{
+  "soulsow": {
+    "id": 24387,
+    "name": "Soulsow",
+    "icon": "003617",
+    "type": "gcd",
+    "recast": 5.0,
+    "category": "spell",
+    "description": "Grants Soulsow buff, enabling Harvest Moon. Can only be used outside combat.",
+    "resource": {}
+  },
+  "harpe": {
+    "id": 24386,
+    "name": "Harpe",
+    "icon": "003616",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "spell",
+    "description": "Ranged magic attack. Used as a pre-pull GCD to start combat.",
+    "resource": {}
+  },
+  "shadow_of_death": {
+    "id": 24378,
+    "name": "Shadow of Death",
+    "icon": "003606",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Applies Death's Design debuff to target, increasing damage taken by 10% for 30s. Generates 10 Soul gauge.",
+    "resource": { "generates": { "soul": 10 } }
+  },
+  "soul_slice": {
+    "id": 24380,
+    "name": "Soul Slice",
+    "icon": "003610",
+    "type": "gcd",
+    "recast": 30.0,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 460 potency. Generates 50 Soul gauge. 2 charges, 30s recast.",
+    "resource": { "generates": { "soul": 50 } }
+  },
+  "arcane_circle": {
+    "id": 24405,
+    "name": "Arcane Circle",
+    "icon": "003633",
+    "type": "ogcd",
+    "recast": 120.0,
+    "category": "ability",
+    "description": "Increases damage dealt by self and nearby party members by 3% for 20s. Grants Circle of Sacrifice to party for 5s. 120s cooldown raid buff.",
+    "resource": {}
+  },
+  "gluttony": {
+    "id": 24393,
+    "name": "Gluttony",
+    "icon": "003623",
+    "type": "ogcd",
+    "recast": 60.0,
+    "category": "ability",
+    "description": "Delivers an attack with 520 potency. Grants 2 stacks of Soul Reaver and 2 stacks of Executioner.",
+    "resource": {}
+  },
+  "gibbet": {
+    "id": 24382,
+    "name": "Gibbet",
+    "icon": "003612",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 500 potency. Flank positional bonus: 560 potency. Consumes Soul Reaver/Executioner.",
+    "resource": {},
+    "positional": "flank"
+  },
+  "gallows": {
+    "id": 24383,
+    "name": "Gallows",
+    "icon": "003613",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 500 potency. Rear positional bonus: 560 potency. Consumes Soul Reaver/Executioner.",
+    "resource": {},
+    "positional": "rear"
+  },
+  "blood_stalk": {
+    "id": 24389,
+    "name": "Blood Stalk",
+    "icon": "003619",
+    "type": "ogcd",
+    "recast": 1.0,
+    "category": "ability",
+    "description": "Delivers an attack with 340 potency. Grants 1 stack of Soul Reaver.",
+    "resource": { "costs": { "soul": 50 } }
+  },
+  "plentiful_harvest": {
+    "id": 24385,
+    "name": "Plentiful Harvest",
+    "icon": "003615",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with potency scaling from Immortal Sacrifice stacks (720-1000). Generates 50 Shroud gauge.",
+    "resource": { "generates": { "shroud": 50 } }
+  },
+  "enshroud": {
+    "id": 24394,
+    "name": "Enshroud",
+    "icon": "003624",
+    "type": "ogcd",
+    "recast": 15.0,
+    "category": "ability",
+    "description": "Enters Enshroud for 30s, granting 5 Lemure Shroud. Costs 50 Shroud gauge.",
+    "resource": { "costs": { "shroud": 50 } }
+  },
+  "void_reaping": {
+    "id": 24395,
+    "name": "Void Reaping",
+    "icon": "003625",
+    "type": "gcd",
+    "recast": 1.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 500 potency. Can only be used during Enshroud. Grants Void Shroud.",
+    "resource": {}
+  },
+  "cross_reaping": {
+    "id": 24396,
+    "name": "Cross Reaping",
+    "icon": "003626",
+    "type": "gcd",
+    "recast": 1.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 500 potency. Can only be used during Enshroud. Grants Void Shroud.",
+    "resource": {}
+  },
+  "lemures_slice": {
+    "id": 24399,
+    "name": "Lemure's Slice",
+    "icon": "003629",
+    "type": "ogcd",
+    "recast": 1.0,
+    "category": "ability",
+    "description": "Delivers an attack with 240 potency. Can only be used during Enshroud. Costs 2 Void Shroud.",
+    "resource": {}
+  },
+  "communio": {
+    "id": 24398,
+    "name": "Communio",
+    "icon": "003628",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "spell",
+    "description": "Deals magic damage with 1100 potency. Enshroud finisher. Can only be used with 1 Lemure Shroud remaining.",
+    "resource": {}
+  },
+  "perfectio": {
+    "id": 36973,
+    "name": "Perfectio",
+    "icon": "003636",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 1300 potency. Can only be used after Communio. Post-Communio finisher.",
+    "resource": {}
+  },
+  "slice": {
+    "id": 24373,
+    "name": "Slice",
+    "icon": "003601",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 300 potency. First hit of the basic combo.",
+    "resource": { "generates": { "soul": 10 } }
+  },
+  "waxing_slice": {
+    "id": 24374,
+    "name": "Waxing Slice",
+    "icon": "003602",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 400 potency when comboed from Slice. Second hit of the basic combo.",
+    "resource": { "generates": { "soul": 10 } }
+  },
+  "infernal_slice": {
+    "id": 24375,
+    "name": "Infernal Slice",
+    "icon": "003603",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 500 potency when comboed from Waxing Slice. Third hit of the basic combo.",
+    "resource": { "generates": { "soul": 10 } }
+  },
+  "harvest_moon": {
+    "id": 24388,
+    "name": "Harvest Moon",
+    "icon": "003618",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "spell",
+    "description": "Deals magic damage with 800 potency. Can only be used when Soulsow buff is active. Ranged attack.",
+    "resource": {}
+  }
+}

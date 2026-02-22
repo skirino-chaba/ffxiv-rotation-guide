@@ -1,0 +1,127 @@
+{
+  "phase": "burst",
+  "label": "Double Enshroud",
+  "description": "The core of Reaper's 2-minute burst: two back-to-back Enshroud windows with accelerated 1.5s GCDs, Lemure's Slice weaves, and Communio + Perfectio finishers.",
+  "steps": [
+    {
+      "position": 11,
+      "skill": "enshroud",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Enter first Enshroud. Costs 50 Shroud gauge. Grants 5 Lemure Shroud stacks and accelerated 1.5s GCDs.",
+      "resources": { "soul": 10, "shroud": 20 }
+    },
+    {
+      "position": 12,
+      "skill": "shadow_of_death",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Refresh Death's Design inside the burst window. Ensures the 10% debuff doesn't fall off during the double Enshroud sequence.",
+      "resources": { "soul": 20, "shroud": 20 }
+    },
+    {
+      "position": 13,
+      "skill": "void_reaping",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "First Enshroud GCD. 500 potency on a 1.5s recast — effectively doubled GCD speed. Grants Void Shroud for Lemure's Slice.",
+      "resources": { "soul": 20, "shroud": 20 }
+    },
+    {
+      "position": 14,
+      "skill": "lemures_slice",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Enshroud oGCD weave. 240 potency. Consumes 2 Void Shroud stacks. Must be woven between Enshroud GCDs.",
+      "resources": { "soul": 20, "shroud": 20 }
+    },
+    {
+      "position": 15,
+      "skill": "cross_reaping",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Alternating Enshroud GCD. Void Reaping and Cross Reaping alternate for optimal buff uptime. Grants Void Shroud.",
+      "resources": { "soul": 20, "shroud": 20 }
+    },
+    {
+      "position": 16,
+      "skill": "lemures_slice",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Second Lemure's Slice weave. Consumes remaining Void Shroud stacks.",
+      "resources": { "soul": 20, "shroud": 20 }
+    },
+    {
+      "position": 17,
+      "skill": "communio",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Enshroud finisher — 1100 potency magic damage. Used when 1 Lemure Shroud remains. Exits Enshroud state.",
+      "resources": { "soul": 20, "shroud": 20 }
+    },
+    {
+      "position": 18,
+      "skill": "perfectio",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Post-Communio finisher — 1300 potency. Only available immediately after Communio. Highest single-hit in the rotation.",
+      "resources": { "soul": 20, "shroud": 20 }
+    },
+    {
+      "position": 19,
+      "skill": "enshroud",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Enter second Enshroud immediately. 15s recast allows back-to-back Enshrouds within the Arcane Circle window.",
+      "resources": { "soul": 20, "shroud": 0 }
+    },
+    {
+      "position": 20,
+      "skill": "void_reaping",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Second Enshroud opener. Same accelerated GCD pattern as the first Enshroud.",
+      "resources": { "soul": 20, "shroud": 0 }
+    },
+    {
+      "position": 21,
+      "skill": "lemures_slice",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Lemure's Slice weave in second Enshroud. Same pattern repeats.",
+      "resources": { "soul": 20, "shroud": 0 }
+    },
+    {
+      "position": 22,
+      "skill": "cross_reaping",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Alternating Enshroud GCD in second window.",
+      "resources": { "soul": 20, "shroud": 0 }
+    },
+    {
+      "position": 23,
+      "skill": "lemures_slice",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Final Lemure's Slice weave of the burst window.",
+      "resources": { "soul": 20, "shroud": 0 }
+    },
+    {
+      "position": 24,
+      "skill": "communio",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Second Communio finisher. 1100 potency.",
+      "resources": { "soul": 20, "shroud": 0 }
+    },
+    {
+      "position": 25,
+      "skill": "perfectio",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Second Perfectio finisher. Ends the double Enshroud burst sequence.",
+      "resources": { "soul": 20, "shroud": 0 }
+    }
+  ]
+}

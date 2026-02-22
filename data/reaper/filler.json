@@ -1,0 +1,71 @@
+{
+  "phase": "filler",
+  "label": "Filler Phase",
+  "description": "Between 2-minute burst windows, maintain Death's Design, build resources with the basic combo and Soul Slice, and spend Soul Reavers on Gibbet/Gallows. Avoid overcapping gauges.",
+  "steps": [
+    {
+      "position": 26,
+      "skill": "slice",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Start the 1-2-3 basic combo. Each hit generates 10 Soul gauge. This is your bread-and-butter GCD filler.",
+      "resources": { "soul": 30, "shroud": 0 }
+    },
+    {
+      "position": 27,
+      "skill": "waxing_slice",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Second combo hit. 400 potency when comboed. Continue building Soul gauge.",
+      "resources": { "soul": 40, "shroud": 0 }
+    },
+    {
+      "position": 28,
+      "skill": "infernal_slice",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Third combo hit, highest potency in the basic chain (500). Completes the combo cycle.",
+      "resources": { "soul": 50, "shroud": 0 }
+    },
+    {
+      "position": 29,
+      "skill": "soul_slice",
+      "type": "gcd",
+      "timing": "Use on cooldown",
+      "reasoning": "Use charges on cooldown to avoid overcapping. Generates 50 Soul gauge per use. Save 1 charge for burst if Arcane Circle is coming within 8s.",
+      "resources": { "soul": 100, "shroud": 0 }
+    },
+    {
+      "position": 30,
+      "skill": "shadow_of_death",
+      "type": "gcd",
+      "timing": "Refresh at <30s",
+      "reasoning": "Refresh Death's Design when less than 30s remains on the debuff. Critical: never let it fall off, but don't clip too early either.",
+      "resources": { "soul": 100, "shroud": 0 }
+    },
+    {
+      "position": 31,
+      "skill": "blood_stalk",
+      "type": "ogcd",
+      "timing": "At 50+ Soul",
+      "reasoning": "Spend Soul gauge when at 50+ to avoid overcapping. Grants Soul Reaver for a Gibbet or Gallows.",
+      "resources": { "soul": 50, "shroud": 0 }
+    },
+    {
+      "position": 32,
+      "skill": "gibbet",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Spend Soul Reaver from Blood Stalk. Alternate with Gallows based on Enhanced buff. Generates 10 Shroud.",
+      "resources": { "soul": 50, "shroud": 10 }
+    },
+    {
+      "position": 33,
+      "skill": "gallows",
+      "type": "gcd",
+      "timing": null,
+      "reasoning": "Spend Soul Reaver. Alternate with Gibbet. Continue building Shroud gauge toward 50 for Enshroud entry at 60s mark.",
+      "resources": { "soul": 50, "shroud": 20 }
+    }
+  ]
+}
