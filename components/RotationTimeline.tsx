@@ -1,15 +1,17 @@
-import type { Skill, RotationPhase } from "@/data/types";
+import type { Skill, RotationPhase, GaugeDefinition } from "@/data/types";
 import PhaseHeader from "./PhaseHeader";
 import SkillStep from "./SkillStep";
 
 interface RotationTimelineProps {
   phases: RotationPhase[];
   skills: Record<string, Skill>;
+  gauges: GaugeDefinition[];
 }
 
 export default function RotationTimeline({
   phases,
   skills,
+  gauges,
 }: RotationTimelineProps) {
   return (
     <div className="space-y-2">
@@ -25,7 +27,12 @@ export default function RotationTimeline({
               const skill = skills[step.skill];
               if (!skill) return null;
               return (
-                <SkillStep key={step.position} step={step} skill={skill} />
+                <SkillStep
+                  key={step.position}
+                  step={step}
+                  skill={skill}
+                  gauges={gauges}
+                />
               );
             })}
           </div>

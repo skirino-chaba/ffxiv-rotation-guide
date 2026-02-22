@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Skill, RotationPhase, GaugeDefinition } from "@/data/types";
 import RotationTimeline from "@/components/RotationTimeline";
-import skillsData from "@/data/reaper/skills.json";
-import openerData from "@/data/reaper/opener.json";
-import burstData from "@/data/reaper/burst.json";
-import fillerData from "@/data/reaper/filler.json";
+import skillsData from "@/data/machinist/skills.json";
+import openerData from "@/data/machinist/opener.json";
+import burstData from "@/data/machinist/burst.json";
+import fillerData from "@/data/machinist/filler.json";
 
 const skills = skillsData as Record<string, Skill>;
 const phases: RotationPhase[] = [
@@ -13,18 +13,18 @@ const phases: RotationPhase[] = [
   fillerData as RotationPhase,
 ];
 
-const REAPER_GAUGES: GaugeDefinition[] = [
-  { key: "soul", label: "Soul", color: "soul", max: 100 },
-  { key: "shroud", label: "Shroud", color: "shroud", max: 100 },
-];
-
 const NAV_ITEMS = [
   { id: "opener", label: "Opener" },
   { id: "burst", label: "Burst" },
   { id: "filler", label: "Filler" },
 ];
 
-export default function ReaperPage() {
+const MCH_GAUGES: GaugeDefinition[] = [
+  { key: "heat", label: "Heat", color: "heat", max: 100 },
+  { key: "battery", label: "Battery", color: "battery", max: 100 },
+];
+
+export default function MachinistPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-8">
       {/* Header */}
@@ -35,9 +35,10 @@ export default function ReaperPage() {
         >
           &larr; Back to jobs
         </Link>
-        <h1 className="text-4xl font-bold text-white">Reaper</h1>
+        <h1 className="text-4xl font-bold text-white">Machinist</h1>
         <p className="mt-2 text-ffxiv-muted">
-          Standard 2-minute rotation &middot; Double Enshroud burst window
+          Standard 2-minute rotation &middot; Hypercharge + Wildfire burst
+          window
         </p>
       </div>
 
@@ -67,25 +68,19 @@ export default function ReaperPage() {
           <span className="text-ffxiv-muted">oGCD (Off Global Cooldown)</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="inline-block h-3 w-3 rounded-full bg-ffxiv-soul" />
-          <span className="text-ffxiv-muted">Soul Gauge</span>
+          <span className="inline-block h-3 w-3 rounded-full bg-ffxiv-heat" />
+          <span className="text-ffxiv-muted">Heat Gauge</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="inline-block h-3 w-3 rounded-full bg-ffxiv-shroud" />
-          <span className="text-ffxiv-muted">Shroud Gauge</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-block rounded bg-ffxiv-gold/20 px-1.5 py-0.5 text-[10px] font-medium text-ffxiv-gold">
-            positional
-          </span>
-          <span className="text-ffxiv-muted">Flank / Rear bonus</span>
+          <span className="inline-block h-3 w-3 rounded-full bg-ffxiv-battery" />
+          <span className="text-ffxiv-muted">Battery Gauge</span>
         </div>
       </div>
 
       {/* Decision logic summary */}
       <details className="mb-8 rounded-lg border border-ffxiv-accent bg-ffxiv-surface">
         <summary className="cursor-pointer px-4 py-3 text-sm font-medium text-white hover:text-ffxiv-highlight">
-          Key Decision Logic (from code analysis)
+          Key Decision Logic
         </summary>
         <div className="border-t border-ffxiv-accent px-4 py-3">
           <table className="w-full text-xs">
@@ -98,56 +93,57 @@ export default function ReaperPage() {
             <tbody className="text-ffxiv-text">
               <tr className="border-t border-ffxiv-accent/30">
                 <td className="py-2 pr-4 font-medium text-ffxiv-highlight">
-                  Burst inside Arcane Circle
+                  Tools on cooldown &mdash; never delay
                 </td>
                 <td className="py-2">
-                  All high-potency actions must land within the 20s raid buff
-                  window.
+                  Drill, Air Anchor, Chain Saw, and Excavator are your
+                  highest-potency GCDs. Delaying them loses uses over a fight.
                 </td>
               </tr>
               <tr className="border-t border-ffxiv-accent/30">
                 <td className="py-2 pr-4 font-medium text-ffxiv-highlight">
-                  Refresh Death&apos;s Design before burst
+                  Never Hypercharge when tools &lt; 8s
                 </td>
                 <td className="py-2">
-                  Check if debuff will expire within 30s. Never let the 10%
-                  damage buff fall off during burst.
+                  Hypercharge locks you into 1.5s GCDs for ~8s. If a tool comes
+                  off cooldown during Hypercharge, you lose a use.
                 </td>
               </tr>
               <tr className="border-t border-ffxiv-accent/30">
                 <td className="py-2 pr-4 font-medium text-ffxiv-highlight">
-                  Burn Soul Slice in first 10s
+                  Wildfire + Hypercharge every 120s
                 </td>
                 <td className="py-2">
-                  Aggressive resource generation in the opener to fuel the burst
-                  window.
+                  Barrel Stabilizer provides the Heat for Hypercharge and aligns
+                  with Wildfire&apos;s 120s cooldown. Always pair them together.
                 </td>
               </tr>
               <tr className="border-t border-ffxiv-accent/30">
                 <td className="py-2 pr-4 font-medium text-ffxiv-highlight">
-                  Double Enshroud at 0-15s or 60-75s
+                  Reassemble on highest-potency tool
                 </td>
                 <td className="py-2">
-                  Enshroud windows must align with Arcane Circle. Two Enshrouds
-                  fit within the 20s burst window.
+                  Reassemble guarantees crit+dhit on the next weaponskill. Use
+                  on Drill or Chain Saw during raid buff windows for maximum
+                  value.
                 </td>
               </tr>
               <tr className="border-t border-ffxiv-accent/30">
                 <td className="py-2 pr-4 font-medium text-ffxiv-highlight">
-                  Save resources near Arcane Circle
+                  Deploy Queen during raid buffs
                 </td>
                 <td className="py-2">
-                  Don&apos;t spend Soul/Shroud when AC is coming within 8s.
-                  Pool for burst.
+                  Automaton Queen snapshots buffs at deployment. Deploy at high
+                  Battery (80+) during 2-minute raid buff windows.
                 </td>
               </tr>
               <tr className="border-t border-ffxiv-accent/30">
                 <td className="py-2 pr-4 font-medium text-ffxiv-highlight">
-                  Avoid overcapping gauges
+                  Single weave during Hypercharge
                 </td>
                 <td className="py-2">
-                  Use Blood Stalk at 50+ Soul, Soul Slice on cooldown. Wasted
-                  gauge = lost damage.
+                  Hypercharge GCD is 1.5s &mdash; only one oGCD fits between
+                  Blazing Shots. Double weaving clips the GCD and loses damage.
                 </td>
               </tr>
             </tbody>
@@ -156,13 +152,13 @@ export default function ReaperPage() {
       </details>
 
       {/* Rotation timeline */}
-      <RotationTimeline phases={phases} skills={skills} gauges={REAPER_GAUGES} />
+      <RotationTimeline phases={phases} skills={skills} gauges={MCH_GAUGES} />
 
       {/* Footer */}
       <footer className="mt-12 border-t border-ffxiv-accent pt-6 text-center text-xs text-ffxiv-muted">
         <p>
           Data sourced from The Balance FFXIV community guides and codebase
-          analysis of RotationSolver.
+          analysis.
         </p>
         <p className="mt-1">
           FINAL FANTASY XIV &copy; SQUARE ENIX CO., LTD. All rights reserved.

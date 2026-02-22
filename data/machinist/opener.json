@@ -1,0 +1,222 @@
+{
+  "phase": "opener",
+  "label": "Opener",
+  "description": "The standard MCH opener front-loads all tool cooldowns under raid buffs, deploys Automaton Queen at high Battery, then enters Hypercharge + Wildfire for maximum burst damage.",
+  "steps": [
+    {
+      "position": 1,
+      "skill": "reassemble",
+      "type": "ogcd",
+      "timing": "Pre-pull",
+      "reasoning": "Use before the pull to guarantee a critical direct hit on Drill. Pre-pull usage doesn't waste GCD time.",
+      "resources": { "heat": 0, "battery": 0 }
+    },
+    {
+      "position": 2,
+      "skill": "drill",
+      "type": "gcd",
+      "timing": "-2s",
+      "reasoning": "Highest-potency single-target tool (580). Opens with Reassembled Drill for a guaranteed crit+dhit opener hit.",
+      "resources": { "heat": 0, "battery": 0 }
+    },
+    {
+      "position": 3,
+      "skill": "barrel_stabilizer",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Instantly generates 50 Heat and grants Full Metal Field Ready. Starts the 120s cooldown aligned with Wildfire.",
+      "resources": { "heat": 50, "battery": 0 }
+    },
+    {
+      "position": 4,
+      "skill": "heated_split_shot",
+      "type": "gcd",
+      "reasoning": "Start the 1-2-3 combo to build Heat between tools. Generates 5 Heat gauge.",
+      "resources": { "heat": 55, "battery": 0 }
+    },
+    {
+      "position": 5,
+      "skill": "double_check",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Spend a charge of Double Check. 3 charges available — weave between GCDs to avoid overcapping charges.",
+      "resources": { "heat": 55, "battery": 0 }
+    },
+    {
+      "position": 6,
+      "skill": "heated_slug_shot",
+      "type": "gcd",
+      "reasoning": "Second combo hit. 300 potency when comboed. Generates 5 Heat.",
+      "resources": { "heat": 60, "battery": 0 }
+    },
+    {
+      "position": 7,
+      "skill": "checkmate",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Spend a charge of Checkmate. Alternate with Double Check to drain both charge pools evenly.",
+      "resources": { "heat": 60, "battery": 0 }
+    },
+    {
+      "position": 8,
+      "skill": "heated_clean_shot",
+      "type": "gcd",
+      "reasoning": "Third combo hit — highest combo potency (380). Generates 5 Heat and 10 Battery.",
+      "resources": { "heat": 65, "battery": 10 }
+    },
+    {
+      "position": 9,
+      "skill": "air_anchor",
+      "type": "gcd",
+      "reasoning": "580 potency tool. Generates 20 Battery. Use on cooldown — never delay tools.",
+      "resources": { "heat": 65, "battery": 30 }
+    },
+    {
+      "position": 10,
+      "skill": "reassemble",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Second charge of Reassemble. Buff the next weaponskill (Chain Saw) for guaranteed crit+dhit.",
+      "resources": { "heat": 65, "battery": 30 }
+    },
+    {
+      "position": 11,
+      "skill": "double_check",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Continue spending Double Check charges between GCDs. Don't let charges overcap.",
+      "resources": { "heat": 65, "battery": 30 }
+    },
+    {
+      "position": 12,
+      "skill": "chain_saw",
+      "type": "gcd",
+      "reasoning": "580 potency tool under Reassemble. Generates 20 Battery and grants Excavator Ready.",
+      "resources": { "heat": 65, "battery": 50 }
+    },
+    {
+      "position": 13,
+      "skill": "excavator",
+      "type": "gcd",
+      "reasoning": "Follow-up to Chain Saw — 580 potency, generates 20 Battery. Must be used while Excavator Ready is active.",
+      "resources": { "heat": 65, "battery": 70 }
+    },
+    {
+      "position": 14,
+      "skill": "automaton_queen",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Deploy Queen at 70 Battery for high potency. Queen damage snapshots raid buffs active at deployment time.",
+      "resources": { "heat": 65, "battery": 0 }
+    },
+    {
+      "position": 15,
+      "skill": "wildfire",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Attach Wildfire to the boss. Deals 240 potency per weaponskill hit during its 10s duration. Target 6 hits.",
+      "resources": { "heat": 65, "battery": 0 }
+    },
+    {
+      "position": 16,
+      "skill": "heated_split_shot",
+      "type": "gcd",
+      "reasoning": "Buffer GCD before Hypercharge. Avoids triple-weaving Queen + Wildfire + Hypercharge. Counts as Wildfire hit 1 and generates 5 Heat.",
+      "resources": { "heat": 70, "battery": 0 }
+    },
+    {
+      "position": 17,
+      "skill": "hypercharge",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Spend 50 Heat to enter Hypercharge. Enables 5 Blazing Shots at 1.5s GCD — single weave only during this window.",
+      "resources": { "heat": 20, "battery": 0 }
+    },
+    {
+      "position": 18,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "First Hypercharge GCD. 220 potency on a 1.5s recast. Generates 5 Battery. Wildfire hit 2.",
+      "resources": { "heat": 20, "battery": 5 }
+    },
+    {
+      "position": 19,
+      "skill": "checkmate",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Single weave between Blazing Shots. Hypercharge's 1.5s GCD only allows one oGCD per window.",
+      "resources": { "heat": 20, "battery": 5 }
+    },
+    {
+      "position": 20,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Second Hypercharge GCD. Continue building Wildfire stacks and Battery. Wildfire hit 3.",
+      "resources": { "heat": 20, "battery": 10 }
+    },
+    {
+      "position": 21,
+      "skill": "double_check",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Alternate Double Check and Checkmate weaves to spend charges evenly.",
+      "resources": { "heat": 20, "battery": 10 }
+    },
+    {
+      "position": 22,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Third Hypercharge GCD. Wildfire hit 4.",
+      "resources": { "heat": 20, "battery": 15 }
+    },
+    {
+      "position": 23,
+      "skill": "checkmate",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Continue alternating oGCD charges during Hypercharge.",
+      "resources": { "heat": 20, "battery": 15 }
+    },
+    {
+      "position": 24,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Fourth Hypercharge GCD. Wildfire hit 5.",
+      "resources": { "heat": 20, "battery": 20 }
+    },
+    {
+      "position": 25,
+      "skill": "double_check",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Final oGCD weave during Hypercharge. Spend remaining charges.",
+      "resources": { "heat": 20, "battery": 20 }
+    },
+    {
+      "position": 26,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Fifth and final Hypercharge GCD. Wildfire hit 6. Hypercharge ends after this.",
+      "resources": { "heat": 20, "battery": 25 }
+    },
+    {
+      "position": 27,
+      "skill": "full_metal_field",
+      "type": "gcd",
+      "reasoning": "580 potency finisher. Uses Full Metal Field Ready from Barrel Stabilizer. Wildfire has detonated for maximum 1440 potency.",
+      "resources": { "heat": 20, "battery": 25 }
+    },
+    {
+      "position": 28,
+      "skill": "drill",
+      "type": "gcd",
+      "reasoning": "Drill comes off cooldown (20s). Use immediately — never delay tools.",
+      "resources": { "heat": 20, "battery": 25 }
+    }
+  ]
+}

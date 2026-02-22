@@ -4,6 +4,10 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
   ],
+  safelist: [
+    { pattern: /text-ffxiv-(soul|shroud|heat|battery)/ },
+    { pattern: /bg-ffxiv-(soul|shroud|heat|battery)/ },
+  ],
   theme: {
     extend: {
       colors: {
@@ -17,6 +21,8 @@ module.exports = {
           ogcd: "#ff6b4a",
           soul: "#e94560",
           shroud: "#7b68ee",
+          heat: "#f97316",
+          battery: "#14b8a6",
           text: "#e0e0e0",
           muted: "#8892b0",
         },

@@ -1,0 +1,140 @@
+{
+  "phase": "burst",
+  "label": "2-Minute Burst",
+  "description": "The recurring burst window every 120s. Barrel Stabilizer + Wildfire come off cooldown together. Front-load tools, deploy Queen at high Battery, then Hypercharge under Wildfire for 6 weaponskill hits.",
+  "steps": [
+    {
+      "position": 29,
+      "skill": "barrel_stabilizer",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Generates 50 Heat and grants Full Metal Field Ready. Always lines up with Wildfire at 120s intervals.",
+      "resources": { "heat": 60, "battery": 80 }
+    },
+    {
+      "position": 30,
+      "skill": "reassemble",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Buff the next Drill for guaranteed crit+dhit. Use Reassemble on the highest-potency tool available in raid buffs.",
+      "resources": { "heat": 60, "battery": 80 }
+    },
+    {
+      "position": 31,
+      "skill": "drill",
+      "type": "gcd",
+      "reasoning": "Reassembled Drill — 580 potency guaranteed crit+dhit. Lead the burst with your hardest-hitting tool.",
+      "resources": { "heat": 60, "battery": 80 }
+    },
+    {
+      "position": 32,
+      "skill": "automaton_queen",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Deploy Queen at 80 Battery for near-maximum potency. Time deployment to snapshot raid buffs.",
+      "resources": { "heat": 60, "battery": 0 }
+    },
+    {
+      "position": 33,
+      "skill": "wildfire",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Attach Wildfire before Hypercharge. Need 6 weaponskill hits in 10s for max 1440 potency detonation.",
+      "resources": { "heat": 60, "battery": 0 }
+    },
+    {
+      "position": 34,
+      "skill": "heated_split_shot",
+      "type": "gcd",
+      "reasoning": "Buffer GCD between Wildfire and Hypercharge. Counts as Wildfire hit 1. Avoids triple-weaving.",
+      "resources": { "heat": 65, "battery": 0 }
+    },
+    {
+      "position": 35,
+      "skill": "hypercharge",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Spend 50 Heat to enter Hypercharge. Provides 5 Blazing Shots at 1.5s GCD for rapid Wildfire stacking.",
+      "resources": { "heat": 15, "battery": 0 }
+    },
+    {
+      "position": 36,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "First Hypercharge GCD. Wildfire hit 2. Single-weave an oGCD charge between each Blazing Shot.",
+      "resources": { "heat": 15, "battery": 5 }
+    },
+    {
+      "position": 37,
+      "skill": "double_check",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Spend Double Check charge. Alternate with Checkmate to drain both pools evenly.",
+      "resources": { "heat": 15, "battery": 5 }
+    },
+    {
+      "position": 38,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Second Hypercharge GCD. Wildfire hit 3.",
+      "resources": { "heat": 15, "battery": 10 }
+    },
+    {
+      "position": 39,
+      "skill": "checkmate",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Spend Checkmate charge between Blazing Shots.",
+      "resources": { "heat": 15, "battery": 10 }
+    },
+    {
+      "position": 40,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Third Hypercharge GCD. Wildfire hit 4.",
+      "resources": { "heat": 15, "battery": 15 }
+    },
+    {
+      "position": 41,
+      "skill": "double_check",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Continue alternating oGCD charges.",
+      "resources": { "heat": 15, "battery": 15 }
+    },
+    {
+      "position": 42,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Fourth Hypercharge GCD. Wildfire hit 5.",
+      "resources": { "heat": 15, "battery": 20 }
+    },
+    {
+      "position": 43,
+      "skill": "checkmate",
+      "type": "ogcd",
+      "timing": "Weave",
+      "reasoning": "Final oGCD weave during Hypercharge.",
+      "resources": { "heat": 15, "battery": 20 }
+    },
+    {
+      "position": 44,
+      "skill": "blazing_shot",
+      "type": "gcd",
+      "timing": "1.5s GCD",
+      "reasoning": "Fifth and final Hypercharge GCD. Wildfire hit 6. Hypercharge window ends.",
+      "resources": { "heat": 15, "battery": 25 }
+    },
+    {
+      "position": 45,
+      "skill": "full_metal_field",
+      "type": "gcd",
+      "reasoning": "580 potency finisher from Barrel Stabilizer's proc. Wildfire has detonated for maximum 1440 potency.",
+      "resources": { "heat": 15, "battery": 25 }
+    }
+  ]
+}

@@ -15,16 +15,20 @@ export interface Skill {
   positional?: "flank" | "rear";
 }
 
+export interface GaugeDefinition {
+  key: string;
+  label: string;
+  color: string;
+  max: number;
+}
+
 export interface RotationStep {
   position: number;
   skill: string;
   type: "gcd" | "ogcd";
   timing?: string;
   reasoning: string;
-  resources: {
-    soul: number;
-    shroud: number;
-  };
+  resources: Record<string, number>;
 }
 
 export interface RotationPhase {

@@ -1,0 +1,171 @@
+{
+  "heated_split_shot": {
+    "id": 7411,
+    "name": "Heated Split Shot",
+    "icon": "003031",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 200 potency. Generates 5 Heat gauge. First hit of the basic combo."
+  },
+  "heated_slug_shot": {
+    "id": 7412,
+    "name": "Heated Slug Shot",
+    "icon": "003032",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 300 potency when comboed from Heated Split Shot. Generates 5 Heat gauge."
+  },
+  "heated_clean_shot": {
+    "id": 7413,
+    "name": "Heated Clean Shot",
+    "icon": "003033",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 380 potency when comboed from Heated Slug Shot. Generates 5 Heat and 10 Battery gauge."
+  },
+  "drill": {
+    "id": 16498,
+    "name": "Drill",
+    "icon": "003037",
+    "type": "gcd",
+    "recast": 20.0,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 580 potency. High-potency tool on a 20s cooldown. Priority target for Reassemble."
+  },
+  "air_anchor": {
+    "id": 16500,
+    "name": "Air Anchor",
+    "icon": "003038",
+    "type": "gcd",
+    "recast": 40.0,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 580 potency. Generates 20 Battery gauge. 40s cooldown tool.",
+    "resource": { "generates": { "battery": 20 } }
+  },
+  "chain_saw": {
+    "id": 25788,
+    "name": "Chain Saw",
+    "icon": "003042",
+    "type": "gcd",
+    "recast": 60.0,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 580 potency. Generates 20 Battery gauge. Grants Excavator Ready. 60s cooldown tool.",
+    "resource": { "generates": { "battery": 20 } }
+  },
+  "excavator": {
+    "id": 36981,
+    "name": "Excavator",
+    "icon": "003046",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 580 potency. Generates 20 Battery gauge. Can only be used after Chain Saw grants Excavator Ready.",
+    "resource": { "generates": { "battery": 20 } }
+  },
+  "reassemble": {
+    "id": 2876,
+    "name": "Reassemble",
+    "icon": "003026",
+    "type": "ogcd",
+    "recast": 55.0,
+    "category": "ability",
+    "description": "Guarantees next weaponskill is a critical direct hit. 55s cooldown, 2 charges. Always pair with highest-potency tool."
+  },
+  "hypercharge": {
+    "id": 17209,
+    "name": "Hypercharge",
+    "icon": "003041",
+    "type": "ogcd",
+    "recast": 15.0,
+    "category": "ability",
+    "description": "Costs 50 Heat gauge. Enables Blazing Shot for 8s (5 uses at 1.5s GCD). Single-weave only during Hypercharge.",
+    "resource": { "costs": { "heat": 50 } }
+  },
+  "blazing_shot": {
+    "id": 36978,
+    "name": "Blazing Shot",
+    "icon": "003043",
+    "type": "gcd",
+    "recast": 1.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 220 potency. Generates 5 Battery gauge. Can only be used during Hypercharge. 1.5s GCD.",
+    "resource": { "generates": { "battery": 5 } }
+  },
+  "wildfire": {
+    "id": 2878,
+    "name": "Wildfire",
+    "icon": "003018",
+    "type": "ogcd",
+    "recast": 120.0,
+    "category": "ability",
+    "description": "Attaches to target for 10s. Deals 240 potency per weaponskill landed (max 6 hits = 1440 potency). 120s cooldown."
+  },
+  "barrel_stabilizer": {
+    "id": 7414,
+    "name": "Barrel Stabilizer",
+    "icon": "003034",
+    "type": "ogcd",
+    "recast": 120.0,
+    "category": "ability",
+    "description": "Generates 50 Heat gauge instantly. Grants Full Metal Field Ready. 120s cooldown, aligns with Wildfire.",
+    "resource": { "generates": { "heat": 50 } }
+  },
+  "gauss_round": {
+    "id": 2874,
+    "name": "Gauss Round",
+    "icon": "003005",
+    "type": "ogcd",
+    "recast": 1.0,
+    "category": "ability",
+    "description": "Delivers an attack with 130 potency. 3 charges. Upgraded to Double Check at level 92."
+  },
+  "ricochet": {
+    "id": 2890,
+    "name": "Ricochet",
+    "icon": "003017",
+    "type": "ogcd",
+    "recast": 1.0,
+    "category": "ability",
+    "description": "Delivers an AoE attack with 130 potency. 3 charges. Upgraded to Checkmate at level 94."
+  },
+  "double_check": {
+    "id": 36979,
+    "name": "Double Check",
+    "icon": "003044",
+    "type": "ogcd",
+    "recast": 1.0,
+    "category": "ability",
+    "description": "Delivers an attack with 160 potency. 3 charges, shared with Checkmate. Upgraded from Gauss Round."
+  },
+  "checkmate": {
+    "id": 36980,
+    "name": "Checkmate",
+    "icon": "003045",
+    "type": "ogcd",
+    "recast": 1.0,
+    "category": "ability",
+    "description": "Delivers an AoE attack with 160 potency. 3 charges, shared with Double Check. Upgraded from Ricochet."
+  },
+  "automaton_queen": {
+    "id": 16501,
+    "name": "Automaton Queen",
+    "icon": "003040",
+    "type": "ogcd",
+    "recast": 6.0,
+    "category": "ability",
+    "description": "Deploys Automaton Queen. Costs 50-100 Battery gauge. Higher Battery = more potency. Deploy during raid buffs for maximum value.",
+    "resource": { "costs": { "battery": 50 } }
+  },
+  "full_metal_field": {
+    "id": 36982,
+    "name": "Full Metal Field",
+    "icon": "003047",
+    "type": "gcd",
+    "recast": 2.5,
+    "category": "weaponskill",
+    "description": "Delivers an attack with 580 potency. Can only be used when Full Metal Field Ready is active (granted by Barrel Stabilizer)."
+  }
+}

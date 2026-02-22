@@ -1,0 +1,75 @@
+{
+  "phase": "filler",
+  "label": "Filler Phase",
+  "description": "Between 2-minute burst windows (~90s of filler). Maintain the 1-2-3 combo, use tool cooldowns immediately, spend Heat on Hypercharge when tools are 8s+ away, and deploy Queen to avoid Battery overcap.",
+  "steps": [
+    {
+      "position": 46,
+      "skill": "heated_split_shot",
+      "type": "gcd",
+      "reasoning": "Start the 1-2-3 combo. Each combo hit generates 5 Heat. This is your primary GCD filler between tool cooldowns.",
+      "resources": { "heat": 40, "battery": 25 }
+    },
+    {
+      "position": 47,
+      "skill": "heated_slug_shot",
+      "type": "gcd",
+      "reasoning": "Second combo hit. 300 potency when comboed. Continue building Heat gauge toward 50 for Hypercharge.",
+      "resources": { "heat": 45, "battery": 25 }
+    },
+    {
+      "position": 48,
+      "skill": "heated_clean_shot",
+      "type": "gcd",
+      "reasoning": "Combo finisher — 380 potency. Generates 5 Heat and 10 Battery. The only combo hit that builds Battery.",
+      "resources": { "heat": 50, "battery": 35 }
+    },
+    {
+      "position": 49,
+      "skill": "drill",
+      "type": "gcd",
+      "timing": "Use on cooldown",
+      "reasoning": "580 potency tool on a 20s recast. Always use immediately when available. Never delay tools for Hypercharge.",
+      "resources": { "heat": 50, "battery": 35 }
+    },
+    {
+      "position": 50,
+      "skill": "air_anchor",
+      "type": "gcd",
+      "timing": "Use on cooldown",
+      "reasoning": "580 potency, generates 20 Battery. 40s recast. Use on cooldown — tool priority is absolute.",
+      "resources": { "heat": 50, "battery": 55 }
+    },
+    {
+      "position": 51,
+      "skill": "chain_saw",
+      "type": "gcd",
+      "timing": "Use on cooldown",
+      "reasoning": "580 potency, generates 20 Battery, grants Excavator Ready. 60s recast. Follow immediately with Excavator.",
+      "resources": { "heat": 50, "battery": 75 }
+    },
+    {
+      "position": 52,
+      "skill": "excavator",
+      "type": "gcd",
+      "reasoning": "Always use directly after Chain Saw. 580 potency, generates 20 Battery. Don't let the Excavator Ready buff expire.",
+      "resources": { "heat": 50, "battery": 95 }
+    },
+    {
+      "position": 53,
+      "skill": "automaton_queen",
+      "type": "ogcd",
+      "timing": "Before overcap",
+      "reasoning": "Deploy Queen when Battery is high to avoid overcapping (max 100). In filler, deploy at 80+ Battery. Save high Battery deploys for raid buff windows when possible.",
+      "resources": { "heat": 50, "battery": 0 }
+    },
+    {
+      "position": 54,
+      "skill": "hypercharge",
+      "type": "ogcd",
+      "timing": "Tools 8s+ away",
+      "reasoning": "Only enter Hypercharge when all tools (Drill, Air Anchor, Chain Saw) have 8s+ remaining on cooldown. Hypercharge locks you into 1.5s GCDs for ~8s — you cannot use tools during this window.",
+      "resources": { "heat": 0, "battery": 0 }
+    }
+  ]
+}

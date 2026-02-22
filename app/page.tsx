@@ -33,6 +33,27 @@ export default function Home() {
               &rarr;
             </span>
           </Link>
+
+          <Link
+            href="/machinist"
+            className="group flex items-center gap-6 rounded-xl border border-ffxiv-accent bg-ffxiv-surface p-6 transition-all hover:border-ffxiv-highlight hover:bg-ffxiv-accent/50"
+          >
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-ffxiv-heat/20 text-3xl">
+              🔧
+            </div>
+            <div className="text-left">
+              <h2 className="text-xl font-semibold text-white group-hover:text-ffxiv-highlight">
+                Machinist
+              </h2>
+              <p className="text-sm text-ffxiv-muted">
+                Standard 2-minute rotation &middot; Hypercharge + Wildfire burst
+                &middot; Filler phase
+              </p>
+            </div>
+            <span className="ml-auto text-2xl text-ffxiv-muted transition-transform group-hover:translate-x-1 group-hover:text-ffxiv-highlight">
+              &rarr;
+            </span>
+          </Link>
         </div>
 
         <p className="mt-12 text-xs text-ffxiv-muted">

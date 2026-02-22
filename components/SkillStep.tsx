@@ -1,13 +1,14 @@
-import type { Skill, RotationStep } from "@/data/types";
+import type { Skill, RotationStep, GaugeDefinition } from "@/data/types";
 import SkillIcon from "./SkillIcon";
 import ResourceBar from "./ResourceBar";
 
 interface SkillStepProps {
   step: RotationStep;
   skill: Skill;
+  gauges: GaugeDefinition[];
 }
 
-export default function SkillStep({ step, skill }: SkillStepProps) {
+export default function SkillStep({ step, skill, gauges }: SkillStepProps) {
   const isOgcd = step.type === "ogcd";
 
   return (
@@ -69,10 +70,7 @@ export default function SkillStep({ step, skill }: SkillStepProps) {
             </p>
 
             <div className="mt-2">
-              <ResourceBar
-                soul={step.resources.soul}
-                shroud={step.resources.shroud}
-              />
+              <ResourceBar gauges={gauges} values={step.resources} />
             </div>
           </div>
         </div>
